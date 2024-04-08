@@ -1,14 +1,17 @@
 // config/db.js
+import dotenv from "dotenv";
+dotenv.config();
+
 import { Sequelize } from "sequelize";
 
 const sequelize = new Sequelize(
   "defaultdb",
-  "avnadmin",
-  "AVNS_vCW_O1WK1jHUZXWLERr",
+  process.env.DATABASE_USERNAME,
+  process.env.DATABASE_PASSWORD,
   {
-    host: "booking-service-ticket-booking-app.a.aivencloud.com",
+    host: process.env.DATABASE_HOST,
     dialect: "mysql",
-    port: 12253,
+    port: process.env.DATABASE_PORT,
   }
 );
 

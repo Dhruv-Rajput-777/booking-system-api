@@ -1,4 +1,6 @@
 import dotenv from "dotenv";
+dotenv.config();
+
 import express, { urlencoded } from "express";
 import sequelize from "./config/db.js";
 import session from "express-session";
@@ -6,7 +8,7 @@ import passport from "passport";
 import passportConfig from "./config/passport.js";
 import cors from "cors";
 
-dotenv.config();
+
 const app = express();
 
 // import routes
