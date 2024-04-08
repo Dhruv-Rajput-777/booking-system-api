@@ -1,5 +1,5 @@
 import Sequelize, { Op } from "sequelize";
-import Trains from "../models/Trains.js";
+import Trains from "../models/trains.js";
 
 const addTrainDetails = async (req, res) => {
   try {
